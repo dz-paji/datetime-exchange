@@ -1,0 +1,17 @@
+时间转换 1.2.1｜安装与使用
+
+适用范围：macOS 13+；Universal 支持 Apple 芯片（arm64）与 Intel（x86_64）。本地分享/测试包；Intel 仅构建检查，未实机测试。
+
+安装：DMG 中将“时间转换.app”拖入“应用程序”；或解压 ZIP 后将 .app 移入，再打开。
+
+首次打开：本包未作 Developer ID 签名或 Apple 公证，macOS 可能拦截，无法保证无提示启动。确认来源可信后，按系统提示在“系统设置”>“隐私与安全性”选“仍要打开”。勿关闭 Gatekeeper 或移除安全属性。
+
+使用：菜单栏“UTC⇄8”可打开工具，实时双向换算 UTC/GMT+8，支持每行一条批量输入。可只输入日期或部分时间，缺少的时分秒补零，兼容 HH-mm-ss；输出/复制格式 YYYY-MM-DD HH:mm:ss。
+
+可生成 MySQL WHERE 文本：默认字段 created_at、updated_at；“+”可添加字段，支持 string/datetime/date、范围和 IN 模板。取值可选转换结果、UTC 或 GMT+8。不会连接或执行数据库。
+
+快捷键：⌘Enter 复制时间；⇧⌘Enter 复制 SQL。关窗后仍在菜单栏运行；⌘Q 退出。无需 Python、Swift、Xcode、AI 服务或联网。配置只存使用者 Mac，本包不含开发者输入/偏好。
+
+正式分发建议 Developer ID 签名及 Apple 公证：
+Apple 支持：https://support.apple.com/zh-cn/102445
+Apple 开发者文档：https://developer.apple.com/documentation/security/notarizing-macos-software-before-distribution
